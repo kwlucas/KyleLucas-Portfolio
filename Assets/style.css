@@ -10,8 +10,9 @@ h1 {
 }
 
 a {
-    font-size: 18px;
+    color: inherit;
     text-decoration: none;
+    font-weight: inherit;
 }
 
 header {
@@ -58,6 +59,7 @@ nav li {
 }
 
 nav a {
+    font-size: 18px;
     color: #3D3D3D;
 }
 
@@ -98,6 +100,10 @@ h3 {
     filter: grayscale(100%);
 }
 
+.caption {
+    opacity: 0;
+}
+
 #project1 {
     background-image: url(./Images/purplePlaceholder.png);
 }
@@ -122,12 +128,22 @@ h3 {
     background-image: url(./Images/purplePlaceholder.png);
 }
 
+#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover {
+    filter: grayscale(0%);
+    height: 170px;
+}
+
+#project1:hover .caption, #project2:hover .caption, #project3:hover .caption, #project4:hover .caption, #project5:hover .caption, #project6:hover .caption {
+    opacity: 1;
+}
+
 h4 {
     margin: 0;
     font-size: 18px;
 }
 
 h5 {
+    font-size: 16px;
     margin: 0;
 }
 
@@ -137,6 +153,7 @@ footer {
 }
 
 footer a {
+    font-size: 18px;
     color: white;
 }
 
