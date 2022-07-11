@@ -7,10 +7,18 @@ body {
 
 header {
     background-color: #5F5F5F;
+    background-image: url(./Images/kyleImage01BW2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 5%;
     padding: 30px;
 }
 
-header #banner h1, p{
+#banner {
+    height: 225px;
+}
+
+#banner h1, #banner p{
     margin: 0;
 }
 
@@ -51,8 +59,14 @@ h3 {
     font-weight: bold;
 }
 
-#about {
+#about{
+    display: flex;
+    justify-content: space-between;
+}
+
+#about p {
     padding: 10px;
+    margin: 0;
 }
 
 #works {
@@ -85,4 +99,32 @@ h6 {
 
 .contactInfo {
     text-align: center;
+}
+
+@media (min-width: 768px){
+    header {
+        background-image: url(./Images/kyleImage01BW.jpg);
+        background-position: 100% 10%;
+    }
+    #banner {
+        height: 250px;
+    }
+}
+
+@media (min-width: 1024px){
+    header {
+        background-position: 100% 20%;
+    }
+    #banner {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px){
+    header {
+        background-position: 100% 30%;
+    }
+    #banner {
+        height: 400px;
+    }
 }
