@@ -89,7 +89,37 @@ h3 {
 }
 
 .project {
-    padding: 20px;
+    width: auto;
+    height: 150px;
+    margin: 17px;
+    padding: 3px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+#project1 {
+    background-image: url(./Images/purplePlaceholder.png);
+}
+
+#project2 {
+    background-image: url(./Images/bluePlaceholder.png);
+}
+
+#project3 {
+    background-image: url(./Images/redPlaceholder.png);
+}
+
+#project4 {
+    background-image: url(./Images/bluePlaceholder.png);
+}
+
+#project5 {
+    background-image: url(./Images/redPlaceholder.png);
+}
+
+#project6 {
+    background-image: url(./Images/purplePlaceholder.png);
 }
 
 h4 {
