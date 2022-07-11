@@ -85,7 +85,7 @@ h3 {
 
 #works {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
 }
 
 .project {
@@ -124,6 +124,10 @@ h6 {
     padding: 10px;
 }
 
+#contact hr {
+    padding: 0;
+}
+
 .contactInfo {
     text-align: center;
 }
@@ -135,6 +139,9 @@ h6 {
     }
     #banner {
         height: 250px;
+    }
+    #works {
+        grid-template-columns: auto auto auto;
     }
 }
 
