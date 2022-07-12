@@ -64,11 +64,16 @@ nav {
 }
 
 nav * {
+    padding: 1px;
+}
+
+nav h2 {
     padding: 10px;
 }
 
 nav ul {
     margin: 0;
+    list-style-type: none;
 }
 
 nav li {
@@ -81,7 +86,8 @@ main {
 
 #about{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #about p {
@@ -90,7 +96,7 @@ main {
 
 #works {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
 }
 
 .project {
@@ -147,6 +153,7 @@ footer {
 
 #contact {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -163,6 +170,23 @@ footer {
     text-align: center;
 }
 
+@media (min-width: 480px){
+    nav * {
+        padding: 10px;
+    }
+    #about{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    #works {
+        grid-template-columns: auto auto;
+    }
+    #contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 @media (min-width: 768px){
     header {
         background-image: url(./Images/kyleImage01BW.jpg);
@@ -173,6 +197,9 @@ footer {
     }
     #works {
         grid-template-columns: auto auto auto;
+    }
+    #contact {
+        flex-wrap: nowrap;
     }
 }
 
