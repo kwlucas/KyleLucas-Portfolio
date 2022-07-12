@@ -1,3 +1,10 @@
+:root {
+    /* Color used for header and */
+    --bgColor1: #5F5F5F;
+    /* Frequently used padding size  */
+    --commonPad: 10px;
+  }
+
 body {
     font-family: Inter, Helvetica, Arial;
     color: white;
@@ -17,7 +24,7 @@ h2 {
 }
 
 h3 {
-    padding: 10px;
+    padding: var(--commonPad);
     font-size: 24px;
 }
 
@@ -45,7 +52,7 @@ p {
 }
 
 header {
-    background: #5F5F5F url(./Images/kyleImage01BW2.jpg) no-repeat 100% 5%;
+    background: var(--bgColor1) url(./Images/kyleImage01BW2.jpg) no-repeat 100% 5%;
     background-size: cover;
     padding: 30px;
 }
@@ -68,7 +75,7 @@ nav * {
 }
 
 nav h2 {
-    padding: 10px;
+    padding: var(--commonPad);
 }
 
 nav ul {
@@ -81,7 +88,7 @@ nav li {
 }
 
 main {
-    padding: 10px;
+    padding: var(--commonPad);
 }
 
 #about{
@@ -91,11 +98,12 @@ main {
 }
 
 #about p {
-    padding: 10px;
+    padding: var(--commonPad);
 }
 
 #works {
     display: grid;
+    /* arrange the project cards/images in a grid with a single column */
     grid-template-columns: auto;
 }
 
@@ -106,10 +114,12 @@ main {
     padding: 3px;
     background-size: cover;
     background-position: center;
+    /* grayscale the project card/image */
     filter: grayscale(100%);
 }
 
 .caption {
+    /* make the captions/project info invisible */
     opacity: 0;
 }
 
@@ -138,16 +148,18 @@ main {
 }
 
 #project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover, #project6:hover {
+    /* While hovering over a project card/image un-grayscale it and make it bigger */
     filter: grayscale(0%);
     height: 170px;
 }
 
 #project1:hover .caption, #project2:hover .caption, #project3:hover .caption, #project4:hover .caption, #project5:hover .caption, #project6:hover .caption {
+    /* While hovering over a project card/image make the caption visible*/
     opacity: 1;
 }
 
 footer {
-    background-color: #5F5F5F;
+    background-color: var(--bgColor1);
     padding: 20px;
 }
 
@@ -159,7 +171,7 @@ footer {
 
 #contact * {
     margin: 0;
-    padding: 10px;
+    padding: var(--commonPad);
 }
 
 #contact hr {
@@ -172,13 +184,14 @@ footer {
 
 @media (min-width: 480px){
     nav * {
-        padding: 10px;
+        padding: var(--commonPad);
     }
     #about{
         flex-wrap: nowrap;
         justify-content: space-between;
     }
     #works {
+        /* Arrange the project cards/images in a grid with two columns */
         grid-template-columns: auto auto;
     }
     #contact {
@@ -189,13 +202,17 @@ footer {
 
 @media (min-width: 768px){
     header {
+        /* Change the banner image to a higher resolution version */
         background-image: url(./Images/kyleImage01BW.jpg);
+        /* Raise the banner image position */
         background-position: 100% 10%;
     }
     #banner {
+        /* Increase the height of banner */
         height: 250px;
     }
     #works {
+        /* Arrange the project cards/images in a grid with three columns */
         grid-template-columns: auto auto auto;
     }
     #contact {
@@ -205,18 +222,22 @@ footer {
 
 @media (min-width: 1024px){
     header {
+        /* Raise the banner image position */
         background-position: 100% 20%;
     }
     #banner {
+        /* Increase the height of banner */
         height: 300px;
     }
 }
 
 @media (min-width: 1200px){
     header {
+        /* Raise the banner image position */
         background-position: 100% 30%;
     }
     #banner {
+        /* Increase the height of banner */
         height: 400px;
     }
 }
